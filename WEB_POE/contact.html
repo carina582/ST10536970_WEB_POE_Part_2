@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom &amp; Bean Café | Contact</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            background-color: #FAFAF0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER / NAVIGATION ===== */
+        header {
+            background-color: #2E7D32;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFD54F;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            border-bottom-color: #FFD54F;
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), 
+                        url('images/cafe-interior.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        /* ===== CONTACT INFO ===== */
+        .contact-info h2 {
+            font-size: 2rem;
+            color: #2E7D32;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #4E342E;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #E8F5E9;
+        }
+
+        .contact-details li i {
+            width: 40px;
+            height: 40px;
+            background-color: #2E7D32;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .contact-details li strong {
+            display: block;
+            font-size: 0.85rem;
+            color: #5D4037;
+        }
+
+        .contact-details li span {
+            font-size: 1rem;
+        }
+
+        /* ===== OPENING HOURS ===== */
+        .opening-hours {
+            background-color: #E8F5E9;
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .opening-hours h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .opening-hours ul {
+            list-style: none;
+        }
+
+        .opening-hours ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #C8E6C9;
+        }
+
+        .opening-hours ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form h2 {
+            font-size: 2rem;
+            color: #2E7D32;
+            margin-bottom: 20px;
+        }
+
+        .contact-form p {
+            color: #4E342E;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2E7D32;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E8F5E9;
+            border-radius: 8px;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2E7D32;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #FFD54F;
+            color: #2E7D32;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFC107;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 213, 79, 0.4);
+        }
+
+        /* ===== MAPS SECTION ===== */
+        .maps-section {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        .maps-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 15px;
+        }
+
+        .maps-section > .container > p {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            color: #4E342E;
+        }
+
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .map-card {
+            background-color: #FAFAF0;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .map-card h3 {
+            color: #2E7D32;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .map-card p {
+            color: #4E342E;
+            margin-bottom: 15px;
+        }
+
+        .map-placeholder {
+            background-color: #E8F5E9;
+            border-radius: 12px;
+            padding: 60px 20px;
+            border: 2px dashed #A5D6A7;
+            color: #2E7D32;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1B1B1B;
+            color: #D7CCC8;
+            padding: 40px 0 20px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        footer h4 {
+            font-family: 'Playfair Display', serif;
+            color: #FFD54F;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer ul li a {
+            color: #D7CCC8;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #FFD54F;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            color: #D7CCC8;
+            font-size: 1.3rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #FFD54F;
+        }
+
+        .footer-bottom {
+            grid-column: 1 / -1;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-details li {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-details li i {
+                width: 35px;
+                height: 35px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+        <div class="container">
+            <div class="logo">Bloom &amp; <span>Bean</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="enquiry.html">Bookings</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Visit us, give us a call, or send us a message.</p>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- ===== CONTACT INFO ===== -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>
+                        Whether you have a question, want to make a booking, or just want 
+                        to say hello — we're always happy to connect with our community.
+                    </p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <span>123 Dorp Street, Stellenbosch, 7600</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>021 123 4567</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>hello@bloomandbean.co.za</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>Website</strong>
+                                <span>www.bloomandbean.co.za</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- ===== OPENING HOURS ===== -->
+                    <div class="opening-hours">
+                        <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                        <ul>
+                            <li><span>Monday &ndash; Friday</span> <span>7:00am &ndash; 6:00pm</span></li>
+                            <li><span>Saturday</span> <span>8:00am &ndash; 5:00pm</span></li>
+                            <li><span>Sunday</span> <span>8:00am &ndash; 3:00pm</span></li>
+                            <li><span>Public Holidays</span> <span>9:00am &ndash; 2:00pm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ===== CONTACT FORM ===== -->
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <p>We'll get back to you within 24 hours.</p>
+
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name <span style="color: #D32F2F;">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span style="color: #D32F2F;">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject <span style="color: #D32F2F;">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject...</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="booking">Event / Function Booking</option>
+                                <option value="feedback">Feedback / Suggestion</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span style="color: #D32F2F;">*</span></label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAPS SECTION ===== -->
+    <section class="maps-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <p>We have two convenient locations for you to visit.</p>
+
+            <div class="maps-grid">
+                <!-- Map 1: Main Café -->
+                <div class="map-card">
+                    <h3>Main Café</h3>
+                    <p>123 Dorp Street, Stellenbosch</p>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p><strong>Map Placeholder</strong></p>
+                        <p style="font-size: 0.85rem; color: #4E342E;">
+                            Add your Google Maps embed code here.<br />
+                            Location 1: Main Café
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Map 2: Satellite Location -->
+                <div class="map-card">
+                    <h3>Satellite Location</h3>
+                    <p>45 Bird Street, Stellenbosch (inside The Gallery)</p>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p><strong>Map Placeholder</strong></p>
+                        <p style="font-size: 0.85rem; color: #4E342E;">
+                            Add your Google Maps embed code here.<br />
+                            Location 2: Satellite Location
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Bloom &amp; Bean Café</h4>
+                <p>Stellenbosch, Western Cape</p>
+                <p><i class="fas fa-phone"></i> 021 123 4567</p>
+                <p><i class="fas fa-envelope"></i> hello@bloomandbean.co.za</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="enquiry.html">Bookings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Mon &ndash; Fri: 7:00am &ndash; 6:00pm</li>
+                    <li>Saturday: 8:00am &ndash; 5:00pm</li>
+                    <li>Sunday: 8:00am &ndash; 3:00pm</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Bloom &amp; Bean Café. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
